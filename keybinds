@@ -1,0 +1,26 @@
+# These are the keybinds of the softwares of this setup.
+# You can remove any keybinds here if you any softwares in this setup.
+
+# Screenshot
+bind = SUPER, S, exec, hyprshot -m region --output-folder ~/Pictures
+
+# App Launcher
+bind = SUPER, D, exec, rofi -show drun
+
+# Rofimoji
+bind = SUPER, R, exec, rofimoji --action type --selector-args='-multi-select'
+
+# Screenlock
+bind = SUPER, L,exec, hyprlock
+
+# Refreshing Waybar
+bind = $mainmod SHIFT, W, exec, ~/.config/waybar/launch.sh
+
+# BrightnessCTL
+bind = ALT, up, exec, brightnessctl  set 5%+
+bind = ALT, down, exec, brightnessctl set 5%-
+
+# Microphone Adjustment
+bindel = ALT,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+
+bindel = ALT,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-
+bindel = ALT,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
